@@ -39,7 +39,7 @@ $(document).ready(function() {
                 required: true,
                 lettersonly: true,
                 maxlength: 200,
-                minlength: 4
+                minlength: 2
             }
         },
 
@@ -55,8 +55,8 @@ $(document).ready(function() {
             loanDateValue: "Pick a date for the  loan",
             customerName: {
                 required: "Enter the Customers Name",
-                lettersonly: "A name can only contain Letters and Spaces",
-                maxlength: "A Full Name Cannot be that long",
+                lettersonly: "the Characters you entered are not allowed",
+                maxlength: "Enter a Valid Surname",
                 minlength: "That's too short"
             }
         }
