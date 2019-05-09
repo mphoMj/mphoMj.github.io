@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <title>Loan Calculator </title>
+    <link href="customcss.css" type="text/css">
+    <link href="../node_modules/fomantic-ui/dist/semantic.min.css" rel="stylesheet" type="text/css">
+
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+
+
+
+    <script src="../node_modules/fomantic-ui/dist/semantic.js"></script>
+    <script src="../node_modules/jquery-validation/dist/jquery.validate.js"></script>
+    <script src="../node_modules/jquery-validation/dist/additional-methods.js"></script>
+    <script src="jQueryValidationFunctions.js"></script>
+    <script src="express_loan_calculator.js"></script>
+</head>
+
+<body>
+
+    <h1 class="ui center aligned header" style="margin-top: 2em; margin-bottom: 1em;">
+        <i class=" calculator icon"></i>
+        Loan Calculator
+    </h1>
+    <div class="ui center container two wide segment">
+        <div class="ui one column centered grid">
+            <div class=" ui segment column  grid" max-width="480px">
+                <form class="ui form" name="calcForm">
+                    <div class="ui fileds">
+                        <div class="ui field">
+                            <label for="customerName"> Customer Name </label>
+                            <input type="text" placeholder="Customer Name" id="customerName" name="customerName" />
+                        </div>
+                        <div class="ui field">
+                            <label for="principal">Loan Amount (MK) </label>
+                            <input type="text" placeholder="Principal Amount" id="principal" name="principal" />
+                        </div>
+                        <div class="ui field">
+                            <label for="loanDate"> Loan Date </label>
+                            <div class="ui calendar" id="loanDate">
+                                <div class="ui input left icon">
+                                    <i class="calendar icon"></i>
+                                    <input type="text" placeholder="Date" id="loanDateValue" name="loanDateValue" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ui field">
+                            <label for="loanType">Loan Type</label>
+                            <select class="ui dropdown" id="loanType" name="loanType" required>
+                                <option value="">Loan Type</option>
+                                <option value="express">Express Loan</option>
+                                <option value="term">Term Loan</option>
+                            </select>
+                        </div>
+                        <div class="ui field">
+                            <button class="ui primary center button" onclick="getValues()">
+                                <i class="calculator icon"></i>
+                                Calculate
+                            </button>
+                            <div class="ui clear button" onclick="clearAll()"> Clear</div>
+                            <div class="ui error message"></div>
+                        </div>
+                    </div>
+                </form>
+                <div class="ui section divider"></div>
+                <h2 class="ui horizontal divider heading">
+
+                    Repayment Schedule
+                </h2>
+                <div id="Result">
+
+                        <div class="ui centered">
+                            <i class="ui spinner loading icon"></i>
+                            Waiting For You to Enter Loan Details
+                        </div>
+                    
+                </div>
+            </div>
+        </div>
+
+    </div>
+    </div>
+</body>
+
+</html>
