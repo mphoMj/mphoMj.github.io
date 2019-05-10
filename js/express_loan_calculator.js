@@ -128,7 +128,7 @@ function amort(customerName, loanAmount, loanInterest, loanDate, dueDate, loanTe
     //begin building the return string for the display of the amort table
     $('#Result').append(
       "<div><table><tr><td>Company Name: </td><td>Smart Cash Financial Services</td></tr>" +
-      "<tr><td> Loan Customer Name: </td><td>MK " + customerName + "</td></tr>" +
+      "<tr><td> Loan Customer Name: </td><td> " + customerName + "</td></tr>" +
         "<tr><td>Principal Amount: </td><td>MK " + (reducingBalance.toFixed(2)).toLocaleString(3) + "</td></tr>" +
         "<tr><td>Interest rate: </td><td>" + (loanInterest * 100).toFixed(2) + "%</td></tr>" +
         "<tr><td>Period of Repayment: </td><td>" + loanTerm + " Month(s)</td></tr>" +
